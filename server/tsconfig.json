@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "outDir": "dist",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "strict": true,
+    "importHelpers": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "types": [
+      "mocha"
+    ],
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  }
+}

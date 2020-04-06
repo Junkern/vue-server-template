@@ -1,0 +1,18 @@
+FROM node:12.16-alpine
+
+ENV HOME /root
+WORKDIR /root/server
+
+
+# install tini to properly handle zombie reaping & signal comm
+RUN apk add --update --no-cache tini bash curl git
+
+ENTRYPOINT ["/sbin/tini", "--"]
+
+COPY ./server/package*.json /root/server/
+
+RUN npm install
+
+COPY ./server /root/server/
+
+CMD [ "npm","run", "run:live"]

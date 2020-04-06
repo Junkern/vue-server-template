@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    # dynamodb:
+    #     image: amazon/dynamodb-local
+    #     ports:
+    #         - 8000:8000
+    #     logging:
+    #         driver: none    
+    server:
+        build:
+            context: ..
+            dockerfile: ./docker/Dockerfile-server
+        ports:
+            - 3000:3000
+        volumes:
+            - ../server:/root/server
+
+    frontend:
+        build:
+            context: ../ui
+            dockerfile: ../docker/Dockerfile-frontend
+        ports:
+            - 8080:8080
+        volumes: 
+            - ../ui/src:/root/src

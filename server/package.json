@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server/index.js",
+    "run:live": "nodemon",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^2.6.0",
+    "fastify-static": "^2.5.0",
+    "http-errors": "^1.7.3"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.5.0",
+    "typescript": "^3.5.3"
+  }
+}
