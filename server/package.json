@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^2.6.0",
-    "fastify-static": "^2.5.0",
+    "fastify-static": "^4.2.4",
     "http-errors": "^1.7.3"
   },
   "devDependencies": {
